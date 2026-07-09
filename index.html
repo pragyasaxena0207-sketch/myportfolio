@@ -2,13 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hi, pragya</h1>
-  <p>Welcome to my portfolio website.</p>
-  <button onclick="greet()">Click Me</button>
+
+  <nav class="navbar">
+    <h2 class="logo">Pragya</h2>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="darkModeBtn">🌙</button>
+  </nav>
+
+  <section id="home" class="hero">
+    <h1>Hi, I'm Pragya</h1>
+    <p>Welcome to my portfolio website — I build things for the web and the cloud ☁️</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I'm a student learning full-stack development and cloud computing. This portfolio itself was built with HTML, CSS, and JavaScript, and deployed using Git, GitHub, and Render — showing a real development-to-deployment workflow.</p>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>This very site — a static site deployed on Render with continuous deployment from GitHub.</p>
+      </div>
+      <div class="project-card">
+        <h3>Cloud Deployment Demo</h3>
+        <p>A project demonstrating domain registration, hosting, and cloud deployment workflows.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project Coming Soon</h3>
+        <p>Add your next project here — a to-do app, calculator, or anything you build next.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p id="formResponse"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Pragya. Built and deployed on the cloud.</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
