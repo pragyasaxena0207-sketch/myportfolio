@@ -33,6 +33,11 @@ function renderStock() {
     `;
     stockBody.appendChild(row);
   });
+
+  // Update summary stats
+  document.getElementById('totalItemsCount').textContent = stock.length;
+  const totalQty = stock.reduce((sum, item) => sum + item.qty, 0);
+  document.getElementById('totalQuantitySum').textContent = totalQty;
 }
 
 // Render transaction logs
