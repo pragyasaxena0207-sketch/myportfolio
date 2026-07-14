@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Stock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📦 Current Stock</h1>
+    <a href="index.html" class="back-link">← Back to Menu</a>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="stock-summary">
+        <div class="summary-box">
+          <span id="totalItemsCount">0</span>
+          <p>Total Items in Stock</p>
+        </div>
+        <div class="summary-box">
+          <span id="totalQuantitySum">0</span>
+          <p>Total Quantity (all units combined)</p>
+        </div>
+      </div>
+      <table id="stockTable">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Unit</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="stockBody"></tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>📝 Transaction History</h2>
+      <ul id="logList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shop Inventory Manager</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Record a Sale</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛒 Record a Sale</h1>
+    <a href="index.html" class="back-link">← Back to Menu</a>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Record an Outgoing Sale</h2>
+      <form id="saleForm">
+        <select id="saleSelect" required>
+          <option value="" disabled selected>Select Item</option>
+        </select>
+        <input type="text" id="saleUnitDisplay" placeholder="Unit" disabled>
+        <input type="number" id="saleQty" placeholder="Quantity Sold" min="1" required>
+        <button type="submit" class="btn sale-btn">Record Sale</button>
+      </form>
+      <p id="saleMessage"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shop Inventory Manager</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

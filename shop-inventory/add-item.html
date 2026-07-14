@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Item</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>➕ Add New Item</h1>
+    <a href="index.html" class="back-link">← Back to Menu</a>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Define a New Item</h2>
+      <p class="hint">Add each item once here with its unit. You'll then select it from a dropdown when receiving stock or recording sales — no more typing errors!</p>
+      <form id="addItemForm">
+        <input type="text" id="itemName" placeholder="Item Name (e.g. Sugar)" required>
+        <select id="itemUnit" required>
+          <option value="" disabled selected>Select Unit</option>
+          <option value="kg">kg</option>
+          <option value="litre">litre</option>
+          <option value="pcs">pcs</option>
+          <option value="gram">gram</option>
+          <option value="box">box</option>
+          <option value="packet">packet</option>
+        </select>
+        <button type="submit" class="btn add-btn">Add Item</button>
+      </form>
+      <p id="itemMessage"></p>
+    </section>
+
+    <section class="card">
+      <h2>Existing Items</h2>
+      <ul id="existingItemsList" class="item-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shop Inventory Manager</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

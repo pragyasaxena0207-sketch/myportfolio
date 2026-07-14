@@ -7,75 +7,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-  <h1>🏪 Shop Inventory Manager</h1>
-  <a href="../index.html" style="color:white; text-decoration:underline;">← Back to Portfolio</a>
-</header>
+  <header>
+    <h1>🏪 Shop Inventory Manager</h1>
+    <a href="../index.html" class="back-link">← Back to Portfolio</a>
+  </header>
 
   <main>
-    <!-- Add Raw Material -->
-    <section class="card">
-      <h2>➕ Raw Material Received</h2>
-      <form id="rawMaterialForm">
-        <input type="text" id="rmName" placeholder="Item Name (e.g. Sugar)" required>
-        <input type="number" id="rmQty" placeholder="Quantity" min="1" required>
-        <input type="text" id="rmUnit" placeholder="Unit (kg, litre, pcs)" required>
-        <button type="submit" class="btn add-btn">Add to Stock</button>
-      </form>
-    </section>
-
-    <!-- Record a Sale -->
-    <section class="card">
-      <h2>🛒 Record a Sale</h2>
-      <form id="saleForm">
-        <input type="text" id="saleName" placeholder="Item Name Sold" required>
-        <input type="number" id="saleQty" placeholder="Quantity Sold" min="1" required>
-        <button type="submit" class="btn sale-btn">Record Sale</button>
-      </form>
-      <p id="saleMessage"></p>
-    </section>
-
-    <!-- Current Stock -->
-    <!-- Current Stock -->
-    <section class="card">
-      <h2>📦 Current Stock</h2>
-      <div class="stock-summary">
-        <div class="summary-box">
-          <span id="totalItemsCount">0</span>
-          <p>Total Items in Stock</p>
-        </div>
-        <div class="summary-box">
-          <span id="totalQuantitySum">0</span>
-          <p>Total Quantity (all units combined)</p>
-        </div>
+    <section class="card menu-card">
+      <h2>What would you like to do?</h2>
+      <div class="menu-grid">
+        <a href="add-item.html" class="menu-btn add">➕ Add New Item</a>
+        <a href="receive.html" class="menu-btn receive">📥 Receive Raw Material</a>
+        <a href="sale.html" class="menu-btn sale">🛒 Record a Sale</a>
+        <a href="stock.html" class="menu-btn stock">📦 View Stock & History</a>
       </div>
-      <table id="stockTable">
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Unit</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody id="stockBody">
-          <!-- Filled dynamically by JS -->
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Transaction Log -->
-    <section class="card">
-      <h2>📝 Transaction History</h2>
-      <ul id="logList"></ul>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2026 Shop Inventory Manager — Deployed on Render</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

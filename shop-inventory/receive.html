@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receive Raw Material</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📥 Receive Raw Material</h1>
+    <a href="index.html" class="back-link">← Back to Menu</a>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Record Incoming Stock</h2>
+      <form id="rawMaterialForm">
+        <select id="rmSelect" required>
+          <option value="" disabled selected>Select Item</option>
+        </select>
+        <input type="text" id="rmUnitDisplay" placeholder="Unit" disabled>
+        <input type="number" id="rmQty" placeholder="Quantity Received" min="1" required>
+        <button type="submit" class="btn add-btn">Add to Stock</button>
+      </form>
+      <p id="rmMessage"></p>
+      <p class="hint">Don't see your item? <a href="add-item.html">Add it first here</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shop Inventory Manager</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
